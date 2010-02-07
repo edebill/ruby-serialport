@@ -1,0 +1,51 @@
+= Ruby/SerialPort
+
+== Description
+
+Ruby/SerialPort is a Ruby library that provides a class for using
+RS-232 serial ports.  This class also contains low-level functions to
+check and set the current state of the signals on the line.
+
+It support POSIX (Linux, *BSD, Solaris, AIX, Mac OS X), Cygwin and native Windows.
+The native Windows version of this library supports Microsoft's Visual C++
+and Borland's C++ compilers.
+
+== Installation
+
+$ gem install ruby-serialport
+
+Any files and older versions can be found at http://rubyforge.org/projects/ruby-serialport/
+
+== Examples
+
+ reuire 'rubygems'
+ require 'serialport'
+ sp = SerialPort.new "/dev/my-modem", 9600
+ sp.write "AT\r\n"
+ puts sp.read   # hopefully "OK" ;-)
+
+A functional example can be found in <tt>examples/miniterm.rb</tt> -- Ruby's copy of miniterm.c
+
+For a compeate API reference see the RDoc of SerialPort.
+
+== License and Copyright
+
+ Copyright (C) 2008 Jonas Bähr <jonas.baehr@fs.ei.tum.de>
+           (C) 2008 Daniel E. Shipton <daniel.shipton.oss@gmail.com> 
+           (C) 2003 Alan Stern <stern@rowland.harvard.edu>
+           (C) 2002 Guillaume Pierronnet <moumar@netcourrier.com>
+ 
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; either version 2
+ of the License, or (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+

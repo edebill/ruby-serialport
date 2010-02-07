@@ -1,0 +1,12 @@
+ChangeLog
+ext/extconf.rb
+ext/serialport.c
+ext/serialport.h
+ext/impl/posix_serialport.c
+ext/impl/win_serialport.c
+lib/serialport.rb
+LICENSE
+Manifest
+Rakefile
+README
+examples/miniterm.rb
